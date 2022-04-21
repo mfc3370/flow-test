@@ -2,10 +2,6 @@
     "name": "component-test",
     "license": "SEE LICENSE IN LICENCE",
     "version": "1.0.0",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/Competec/b2c-components.git"
-    },
     "engines": {
         "node": ">=16.13.1",
         "npm": ">=7.0.0",

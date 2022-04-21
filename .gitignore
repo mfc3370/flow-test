@@ -2,24 +2,7 @@
 node_modules
 yarn-error.log
 .pnp*
-/lib/
-build
-coverage/lcov-report
-coverage/clover.xml
-coverage/coverage-final.json
-coverage/lcov.info
-
-.idea
-.idea/shelf
-.idea/dictionaries
-.idea/workspace.xml
-.idea/php.xml
-.idea/yii2settings.xml
-
-b2c-components.iml
 
 # Files
 .DS_Store
 .env
-screener/config/index.js
-config/_temp_/changed-files.txt
