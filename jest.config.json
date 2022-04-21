@@ -1,0 +1,47 @@
+{
+    "testRegex": "((\\.|/*.)(test))\\.js?$",
+    "reporters": [
+        "default",
+        "jest-github-actions-reporter"
+    ],
+    "testEnvironment": "jsdom",
+    "testLocationInResults": true,
+    "setupFilesAfterEnv": [
+        "<rootDir>/scripts/setupTests.js",
+        "./node_modules/jest-enzyme/lib/index.js"
+    ],
+    "moduleNameMapper": {
+        "actual-jest-axe": "<rootDir>/node_modules/jest-axe/index.js",
+        "jest-axe": "<rootDir>/scripts/axe-helper.js",
+        "b2c-components/core/(.*)$": "<rootDir>/src/core/$1",
+        "b2c-components/theme/(.*)$": "<rootDir>/src/themes/brack/$1",
+        "b2c-components/common/config/env$": "<rootDir>/src/common/config/env/storybook-brack-devbox.js",
+        "b2c-components/common/(.*)$": "<rootDir>/src/common/$1",
+        "b2c-components/test-data/(.*)$": "<rootDir>/test-data/$1",
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+        "^.+\\.module\\.{css,sass,scss}$": "<rootDir>/__mocks__/styleMock.js",
+        "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "snapshotSerializers": [
+        "enzyme-to-json/serializer"
+    ],
+    "coverageThreshold": {
+        "global": {
+            "branches": 100,
+            "functions": 100,
+            "lines": 100,
+            "statements": 100
+        }
+    },
+    "collectCoverageFrom": [
+        "src/**/*.{js,jsx}",
+        "!/node_modules/",
+        "!<rootDir>/test-data",
+        "!src/**/*.types.js",
+        "!src/**/_storybook_/*",
+        "!src/**/storybook-setup/**/*",
+        "!src/**/polyfills/**/*",
+        "!src/**/vendor/**/*",
+        "!src/common/config/env/*.js"
+    ]
+}

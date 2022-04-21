@@ -1,0 +1,27 @@
+{
+    "name": "component-test",
+    "license": "SEE LICENSE IN LICENCE",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Competec/b2c-components.git"
+    },
+    "engines": {
+        "node": ">=16.13.1",
+        "npm": ">=7.0.0",
+        "yarn": ">=1.22.4"
+    },
+    "scripts": {
+        "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Please use yarn, not NPM. Thank you :-)')\"",
+        "reset": "rm -rf ./node_modules && yarn",
+        "reset:yarn": "rm ./yarn.lock && yarn reset",
+        "install:flow": "rm -rf flow-typed/npm; flow-typed install",
+        "test:flow": "flow check"
+    },
+    "devDependencies": {
+        "flow-annotation-check": "1.11.4",
+        "flow-bin": "^0.176.2",
+        "flow-copy-source": "2.0.9",
+        "flow-typed": "3.7.0"
+    }
+}

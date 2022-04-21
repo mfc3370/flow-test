@@ -1,0 +1,20 @@
+[ignore]
+<PROJECT_ROOT>/build/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+include_warnings=true
+module.name_mapper='.*\(.s?css\)' -> 'empty/object'
+module.name_mapper='.*\(.md\)' -> 'empty/object'
+sharedmemory.hash_table_pow=20
+
+[strict]
+
+[untyped]
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/scripts/.*
